@@ -1,0 +1,639 @@
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v12.0.0"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2025-12-03T13:39:12.752Z",
+				"time": 17.756999999999998,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:8080/api/tarefas/21",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 204,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Date",
+							"value": "Wed, 03 Dec 2025 13:07:51 GMT"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 17.756999999999998,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar Tarefa"
+			},
+			{
+				"startedDateTime": "2025-12-03T13:39:12.752Z",
+				"time": 979.172,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:8080/api/tarefas/23",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"titulo\": \"Estudar Flask\",\n\t\"descricao\": \"Criar uma API completa\",\n\t\"status\": \"EM_ANDAMENTO\",\n\t\"dataCriacao\": \"2025-12-03\",\n\t\"dataLimite\": \"2026-01-20\",\n\t\"usuarioId\": 1,\n\t\"prioridade\": \"MEDIA\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Wed, 03 Dec 2025 13:23:11 GMT"
+						}
+					],
+					"content": {
+						"size": 587,
+						"mimeType": "application/json",
+						"text": "{\"id\":23,\"titulo\":\"Estudar Flask\",\"descricao\":\"Criar uma API completa\",\"status\":\"EM_ANDAMENTO\",\"dataCriacao\":\"2025-12-03\",\"dataLimite\":\"2026-01-20\",\"usuario\":{\"id\":1,\"nome\":\"João Silva\",\"email\":\"joao@email.com\",\"tarefas\":[{\"id\":1,\"titulo\":\"Estudar Spring Boot\",\"descricao\":\"Criar API REST completa\",\"status\":\"PENDENTE\",\"dataCriacao\":\"2025-12-02\",\"dataLimite\":\"2025-12-09\",\"prioridade\":\"ALTA\"},{\"id\":23,\"titulo\":\"Estudar Flask\",\"descricao\":\"Criar uma API completa\",\"status\":\"EM_ANDAMENTO\",\"dataCriacao\":\"2025-12-03\",\"dataLimite\":\"2026-01-20\",\"prioridade\":\"MEDIA\"}]},\"prioridade\":\"MEDIA\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 979.172,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Atualizar Tarefa"
+			},
+			{
+				"startedDateTime": "2025-12-03T13:39:12.752Z",
+				"time": 875.401,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/api/tarefas",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"titulo\": \"Estudar Flask\",\n\t\"descricao\": \"Criar uma API completa\",\n\t\"status\": \"PENDENTE\",\n\t\"dataCriacao\": \"2025-12-02\",\n\t\"dataLimite\": \"2026-01-20\",\n\t\"usuarioId\": 1,\n\t\"prioridade\": \"ALTA\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Location",
+							"value": "/api/tarefas/23"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Wed, 03 Dec 2025 13:06:52 GMT"
+						}
+					],
+					"content": {
+						"size": 577,
+						"mimeType": "application/json",
+						"text": "{\"id\":23,\"titulo\":\"Estudar Flask\",\"descricao\":\"Criar uma API completa\",\"status\":\"PENDENTE\",\"dataCriacao\":\"2025-12-02\",\"dataLimite\":\"2026-01-20\",\"usuario\":{\"id\":1,\"nome\":\"João Silva\",\"email\":\"joao@email.com\",\"tarefas\":[{\"id\":1,\"titulo\":\"Estudar Spring Boot\",\"descricao\":\"Criar API REST completa\",\"status\":\"PENDENTE\",\"dataCriacao\":\"2025-12-02\",\"dataLimite\":\"2025-12-09\",\"prioridade\":\"ALTA\"},{\"id\":23,\"titulo\":\"Estudar Flask\",\"descricao\":\"Criar uma API completa\",\"status\":\"PENDENTE\",\"dataCriacao\":\"2025-12-02\",\"dataLimite\":\"2026-01-20\",\"prioridade\":\"ALTA\"}]},\"prioridade\":\"ALTA\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 875.401,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Criar Tarefa"
+			},
+			{
+				"startedDateTime": "2025-12-03T13:39:12.752Z",
+				"time": 20.254,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8080/api/tarefas/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Wed, 03 Dec 2025 00:44:50 GMT"
+						}
+					],
+					"content": {
+						"size": 418,
+						"mimeType": "application/json",
+						"text": "{\"id\":1,\"titulo\":\"Estudar Spring Boot\",\"descricao\":\"Criar API REST completa\",\"status\":\"PENDENTE\",\"dataCriacao\":\"2025-12-02\",\"dataLimite\":\"2025-12-09\",\"usuario\":{\"id\":1,\"nome\":\"João Silva\",\"email\":\"joao@email.com\",\"tarefas\":[{\"id\":1,\"titulo\":\"Estudar Spring Boot\",\"descricao\":\"Criar API REST completa\",\"status\":\"PENDENTE\",\"dataCriacao\":\"2025-12-02\",\"dataLimite\":\"2025-12-09\",\"prioridade\":\"ALTA\"}]},\"prioridade\":\"ALTA\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 20.254,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Buscar Tarefa Por ID"
+			},
+			{
+				"startedDateTime": "2025-12-03T13:39:12.752Z",
+				"time": 15.626000000000001,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8080/api/tarefas",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Wed, 03 Dec 2025 00:44:20 GMT"
+						}
+					],
+					"content": {
+						"size": 420,
+						"mimeType": "application/json",
+						"text": "[{\"id\":1,\"titulo\":\"Estudar Spring Boot\",\"descricao\":\"Criar API REST completa\",\"status\":\"PENDENTE\",\"dataCriacao\":\"2025-12-02\",\"dataLimite\":\"2025-12-09\",\"usuario\":{\"id\":1,\"nome\":\"João Silva\",\"email\":\"joao@email.com\",\"tarefas\":[{\"id\":1,\"titulo\":\"Estudar Spring Boot\",\"descricao\":\"Criar API REST completa\",\"status\":\"PENDENTE\",\"dataCriacao\":\"2025-12-02\",\"dataLimite\":\"2025-12-09\",\"prioridade\":\"ALTA\"}]},\"prioridade\":\"ALTA\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 15.626000000000001,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Listar Tarefas"
+			},
+			{
+				"startedDateTime": "2025-12-03T13:39:12.752Z",
+				"time": 47.09,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:8080/api/usuarios/21",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 204,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Date",
+							"value": "Wed, 03 Dec 2025 00:41:27 GMT"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 47.09,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Deletar Usuário"
+			},
+			{
+				"startedDateTime": "2025-12-03T13:39:12.752Z",
+				"time": 52.013999999999996,
+				"request": {
+					"method": "PUT",
+					"url": "http://localhost:8080/api/usuarios/21",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"nome\": \"Roger Ferreira\",\n\t\"email\": \"roger@email.com\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Wed, 03 Dec 2025 00:40:21 GMT"
+						}
+					],
+					"content": {
+						"size": 59,
+						"mimeType": "application/json",
+						"text": "{\"id\":21,\"nome\":\"Roger Ferreira\",\"email\":\"roger@email.com\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 52.013999999999996,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Atualizar Usuário"
+			},
+			{
+				"startedDateTime": "2025-12-03T13:39:12.752Z",
+				"time": 413.30400000000003,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:8080/api/usuarios",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n\t\"nome\": \"Roger Cardoso\",\n\t\"email\": \"roger@email.com\"\n}"
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 201,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Location",
+							"value": "/api/usuarios/21"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Wed, 03 Dec 2025 00:39:14 GMT"
+						}
+					],
+					"content": {
+						"size": 58,
+						"mimeType": "application/json",
+						"text": "{\"id\":21,\"nome\":\"Roger Cardoso\",\"email\":\"roger@email.com\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 413.30400000000003,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Criar Usuário"
+			},
+			{
+				"startedDateTime": "2025-12-03T13:39:12.752Z",
+				"time": 88.478,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8080/api/usuarios/1",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Wed, 03 Dec 2025 00:38:11 GMT"
+						}
+					],
+					"content": {
+						"size": 54,
+						"mimeType": "application/json",
+						"text": "{\"id\":1,\"nome\":\"João Silva\",\"email\":\"joao@email.com\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 88.478,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Buscar Usuário Por ID"
+			},
+			{
+				"startedDateTime": "2025-12-03T13:39:12.752Z",
+				"time": 12.959,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:8080/api/usuarios",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "User-Agent",
+							"value": "insomnia/12.0.0"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": ""
+					},
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Wed, 03 Dec 2025 00:40:30 GMT"
+						}
+					],
+					"content": {
+						"size": 116,
+						"mimeType": "application/json",
+						"text": "[{\"id\":1,\"nome\":\"João Silva\",\"email\":\"joao@email.com\"},{\"id\":21,\"nome\":\"Roger Ferreira\",\"email\":\"roger@email.com\"}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 12.959,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "Listar Usuários"
+			}
+		]
+	}
+}

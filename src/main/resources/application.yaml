@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: taskmanager
+
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1522/XEPDB1
+    username: taskmanager
+    password: taskmanager
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  sql:
+    init:
+      mode: never
+
+  jpa:
+      hibernate:
+        ddl-auto: update
