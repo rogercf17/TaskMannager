@@ -1,6 +1,6 @@
 import type { CriarTarefaDTO } from "../types/CriarTarefaDTO";
 
-const API_URL = "http://localhost:8080/api/tarefas";
+const API_URL = `${import.meta.env.VITE_API_URL ?? "http://localhost:8080"}/api/tarefas`;
 
 export const getTarefas = async () => {
     const res = await fetch(API_URL);
