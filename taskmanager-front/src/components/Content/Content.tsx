@@ -1,12 +1,11 @@
 import SearchBar from "../SearchBar/SearchBar";
-import ButtonFormulario from "../ButtonFormulario/ButtonFormulario.jsx";
+import ButtonFormulario from "../ButtonFormulario/ButtonFormulario";
 import styled from "styled-components";
 import CardTarefa from "../CardTarefa/CardTarefa";
 import { useEffect, useState } from "react";
-import { getTarefas } from "../../services/taskService.js";
+import { getTarefas } from "../../services/taskService";
 import type { Tarefa } from "../../types/Tarefa";
-import type { FiltroTarefa } from "../../types/FiltroTarefa.js";
-import Sidebar from "../Sidebar/SideBar.js";
+import type { FiltroTarefa } from "../../types/FiltroTarefa";
 
 const Section = styled.section`
     width: 80%;
@@ -29,17 +28,6 @@ type Props = {
 export default function Content({ filtro }: Props) {
     const [tarefas, setTarefas] = useState<Tarefa[]>([]);
 
-    const loadTarefas = async () => {
-        try {
-            const data = await getTarefas();
-            console.log("Resposta da API:", data);
-            setTarefas(data);
-        }catch (error) {
-            console.error("Erro ao carregar tarefas:", error)
-            setTarefas([]);
-        }
-    };
-
     const atualizarStatusLocal = (tarefaAtualizada: Tarefa) => {
         setTarefas((prev) => 
             prev.map((t) =>
@@ -52,6 +40,16 @@ export default function Content({ filtro }: Props) {
     };
 
     useEffect(() => {
+        const loadTarefas = async () => {
+            try {
+                const data = await getTarefas();
+                setTarefas(data);
+            } catch (error) {
+                console.error("Erro ao carregar tarefas:", error);
+                setTarefas([]);
+            }
+        };
+
         loadTarefas();
     }, []);
 

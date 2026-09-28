@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import Sidebar from "./components/Sidebar/SideBar"
+import { useState } from "react"
+import Sidebar from "./components/Sidebar/Sidebar.js"
 import Content from "./components/Content/Content"
 import styled from "styled-components"
 import type { FiltroTarefa } from "./types/FiltroTarefa"

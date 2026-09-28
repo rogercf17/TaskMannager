@@ -29,18 +29,18 @@ const NavDiv = styled.div`
         margin-bottom: 0;
     }
 `
-const NavLink = styled.a`
+const NavLink = styled.a<{ $active?: boolean }>`
     display: flex;
     align-items: center;
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
     cursor: pointer;
-    color: ${({ active }) => (active ? "#3273dc" : "#4a4a4a")};
-    
+    color: ${({ $active }) => ($active ? "#3273dc" : "#4a4a4a")};
+
     &:hover {
         color: #3273dc;
     }
-    
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -73,7 +73,7 @@ const Sidebar = ({ filtro, setFiltro }: Props) => {
             <nav>
                 <NavDiv>
                     <NavLink
-                        active={filtro === "TODAS"}
+                        $active={filtro === "TODAS"}
                         onClick={() => setFiltro("TODAS")}
                     >
                         <IconWrapper>
@@ -85,7 +85,7 @@ const Sidebar = ({ filtro, setFiltro }: Props) => {
 
                 <NavDiv>
                     <NavLink 
-                        active={filtro === "IMPORTANTE"}
+                        $active={filtro === "IMPORTANTE"}
                         onClick={() => setFiltro("IMPORTANTE")}
                     >
                         <IconWrapper>
@@ -97,7 +97,7 @@ const Sidebar = ({ filtro, setFiltro }: Props) => {
 
                 <NavDiv>
                     <NavLink 
-                        active={filtro === "EM_ANDAMENTO"}
+                        $active={filtro === "EM_ANDAMENTO"}
                         onClick={() => setFiltro("EM_ANDAMENTO")}
                     >
                         <IconWrapper>
@@ -109,7 +109,7 @@ const Sidebar = ({ filtro, setFiltro }: Props) => {
 
                 <NavDiv>
                     <NavLink 
-                        active={filtro === "CONCLUIDAS"}
+                        $active={filtro === "CONCLUIDAS"}
                         onClick={() => setFiltro("CONCLUIDAS")}
                     >
                         <IconWrapper>

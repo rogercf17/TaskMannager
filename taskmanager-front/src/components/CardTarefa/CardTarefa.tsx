@@ -1,4 +1,3 @@
-import React from "react";
 import { FaCalendarAlt, FaUser } from "react-icons/fa";
 import styled from "styled-components";
 import type { Tarefa } from "../../types/Tarefa";
